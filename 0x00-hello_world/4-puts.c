@@ -1,6 +1,8 @@
-/*C program that prints exactly*/
-
 #include <stdio.h>
+
+/*
+ * C program that prints exactly
+ */
 
 int main(void)
 {
