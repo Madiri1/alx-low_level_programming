@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- *-strlen -  returns the length of a string
+ *_strlen -  returns the length of a string
  *@s: string
  * Return: Length of string
- * */
+ */
 
- int _strlen(char *s)
+int _strlen(char *s)
 {
 	int len = 0;
 
