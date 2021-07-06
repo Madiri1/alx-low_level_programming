@@ -1,35 +1,38 @@
 #include "holberton.h"
 
 /**
-  * _strstr - locate a substring
-  * @haystack: the string to search
-  * @needle: the string to find
-  *
-  * Return: char value
-  */
+ * _strstr - locates a substring
+ * @haystack: string to search through
+ * @needle: string to match
+ * Return: pointer to initial segment of haystack
+ */
+
 char *_strstr(char *haystack, char *needle)
 {
-	int a = 0, b = 0;
+	int i, j, start;
+	int nlen = 0;
 
-	while (haystack[a])
+	i = 0;
+	j = 0;
+	start = 0;
+
+	while (needle[nlen] != '\0')
 	{
-		while (needle[b])
-		{
-			if (haystack[a + b] != needle[b])
-			{
-				break;
-			}
-
-			b++;
-		}
-
-		if (needle[b] == '\0')
-		{
-			return (haystack + a);
-		}
-
-		a++;
+		nlen++;
 	}
-
-	return ('\0');
-}}
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		for (j = 0; j < nlen && haystack[i] == needle[j]; j++, i++)
+		{
+			if (j == 0)
+			{
+				start = i;
+			}
+			if (j == nlen - 1)
+			{
+				return (haystack + start);
+			}
+		}
+	}
+	return (0);
+}
