@@ -1,15 +1,17 @@
 #include "holberton.h"
 #include <stdio.h>
 
-/** main -number of arguments
- * @argc: first parameter
- * @argv: second parameter
- * return: 0
+/**
+ * main - prints the number of arguments passed into it
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: (0)
  */
 
-int main(int argc, char *argv[])
+int main(int argc, __attribute__((unused)) char *argv[])
 {
-	(void)arvg;
-	printf("argc = %d", argc);
+	int args = argc - 1;
+
+	printf("%d\n", args);
 	return (0);
 }
