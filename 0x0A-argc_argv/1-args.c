@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdiio.h>
+#include <stdio.h>
 
 /** main -number of arguments
  * @argc: first parameter
@@ -9,6 +9,7 @@
 
 int main(int argc, char *argv[])
 {
+	(void)arvg;
 	printf("argc = %d", argc);
 	return (0);
 }
