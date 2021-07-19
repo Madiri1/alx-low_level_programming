@@ -1,38 +1,24 @@
 #include "holberton.h"
 
 /**
- * _strlen - calculates the length of a string
- * @x: parameter to function _strlen
- * Return: - return length of string
- */
-
-int _strlen(char x[])
-{
-	int i = 0, count = 0;
-
-	while (x[i] != '\0')
-	{
-		count++;
-		i++;
-	}
-	return (count);
-}
-
-/**
  * _strcat - concatenates two strings
- * @dest: string 1
- * @src: string 2
- * Return: pointer
+ * @dest: destination char
+ * @src: source char
+ * Return: new char
  */
 
 char *_strcat(char *dest, char *src)
 {
-	int dest_len = _strlen(dest);
-	int src_len = _strlen(src), i;
+	int i;
+	int n = 0;
 
-	for (i = 0; i <= src_len; i++)
+	while (dest[n] != '\0')
 	{
-		dest[dest_len + 1] = src[i];
+		n++;
 	}
+	for (i = 0 ; i < n && src[i] != '\0' ; i++)
+		dest[n + i] = src[i];
+	dest[n + i] = '\0';
+
 	return (dest);
 }
