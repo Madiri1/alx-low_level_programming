@@ -1,13 +1,3 @@
-#include "main.h"
-#include <stdio.h>
-
-/**
- * main - check the code
- *
- * Return: Always EXIT_SUCCESS.
- */
-int main(void)
-{
-    printf("%d\n", _strlen("My Dyn Lib"));
-    return 0;
-}
+#!/bin/bash
+gcc -fPIC -c *.c
+gcc -shared -o liball.so *.o
